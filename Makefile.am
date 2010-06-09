@@ -24,7 +24,6 @@ EXTRA_DIST += bootstrap bootstrap.conf bootstrap-funclib.sh
 SUBDIRS = lib \
 	libinetutils libtelnet libicmp libls \
 	src telnet telnetd ftp ftpd talk talkd whois ping ifconfig \
-	doc man \
 	tests
 
 DISTCLEANFILES = pathdefs.make paths.defs
