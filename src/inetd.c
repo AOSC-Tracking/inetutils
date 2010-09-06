@@ -1112,7 +1112,6 @@ getconfigent (FILE *fconfig, const char *file, size_t *line)
 	  if (sep->se_proto[3] == '6')
 	    {
 	      sep->se_family = AF_INET6;
-	      sep->se_v4mapped = 0;
 	      /* Check for tcp6only and udp6only.  */
 	      if (strcmp (&sep->se_proto[3], "6only") == 0)
 		sep->se_v4mapped = 0;
