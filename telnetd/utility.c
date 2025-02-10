@@ -44,6 +44,10 @@
 # endif
 #endif
 
+#ifdef HAVE_CURSES_NO_PROTOTYPE_BUT_YES_TGETENT
+#include <term.h>
+#endif
+
 #if defined HAVE_STREAMSPTY && defined HAVE_GETMSG	\
   && defined HAVE_STROPTS_H
 # include <stropts.h>
