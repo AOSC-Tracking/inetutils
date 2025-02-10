@@ -135,6 +135,10 @@ AC_DEFUN([IU_LIB_TERMCAP], [
 	AC_DEFINE([HAVE_CURSES_TGETENT], 1)
       fi
     fi
+    if test "$ac_cv_lib_curses_tgetent" = yes \
+	&& test "$ac_cv_have_decl_tgetent" = no; then
+      AC_DEFINE([HAVE_CURSES_NO_PROTOTYPE_BUT_YES_TGETENT], 1, [curses defined but no prototype])
+    fi
     if test "$ac_cv_lib_curses_tgetent" = no \
 	&& test "$ac_cv_lib_termcap_tgetent" = no; then
       AC_CHECK_LIB(termlib, tgetent, LIBTERMCAP=-ltermlib)

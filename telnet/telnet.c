@@ -758,6 +758,10 @@ mklist (char *buf, char *name)
  */
 char termbuf[2048] = { 0 };
 
+#ifdef HAVE_CURSES_NO_PROTOTYPE_BUT_YES_TGETENT
+#include <term.h>
+#endif
+
 static int
 init_term (char *tname, int *errp)
 {
